@@ -11,7 +11,7 @@ T add(T a, T b) requires Numeric<T>{
 }
 template<typename T>
 T devide(T a, T b) requires Numeric<T>{
-	if (b == 0) throw std::format("b cannot be zero");
+	if (b == 0) throw std::format("Denominator cannot be zero");
 	return a / b;
 }
 int main() {
