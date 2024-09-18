@@ -20,6 +20,11 @@ T sub(T a, T b) requires Numeric<T>{
 	return a - b;
 }
 
+template<typename T>
+T mul(T a, T b) requires Numeric<T> {
+	return a * b;
+}
+
 int main() {
 	int a = 10;
 	int b = 0;
