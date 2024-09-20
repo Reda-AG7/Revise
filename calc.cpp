@@ -30,6 +30,7 @@ int main() {
 	int b = 0;
 	std::cout<<std::format("{} + {} = {}\n", a, b, add(a,b));
 	std::cout<<std::format("{} - {} = {}\n", a, b, sub(a,b));
+	std::cout<<std::format("{} * {} = {}\n", a, b, mul(a,b));
 	try{
 		int x = devide(a,b);
 		std::cout<<std::format("{} / {} = {}\n", a, b, x); 
