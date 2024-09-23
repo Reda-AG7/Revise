@@ -24,13 +24,16 @@ template<typename T>
 T mul(T a, T b) requires Numeric<T> {
 	return a * b;
 }
-
+template<typename T>
+void Log(const char* oprt, T a, T b, T(fptr*)(T,T)) requires Numeric<T>{
+	std::cout<<std::format("{} {} {} = {}\n", a, oprt, b, fpt(a,b);
+}
 int main() {
 	int a = 10;
 	int b = 0;
-	std::cout<<std::format("{} + {} = {}\n", a, b, add(a,b));
-	std::cout<<std::format("{} - {} = {}\n", a, b, sub(a,b));
-	std::cout<<std::format("{} * {} = {}\n", a, b, mul(a,b));
+	Log('+',a,b,add(a,b));
+	Log('-',a,b,sub(a,b));
+	Log('*',a,b,mul(a,b));
 	try{
 		int x = devide(a,b);
 		std::cout<<std::format("{} / {} = {}\n", a, b, x); 
