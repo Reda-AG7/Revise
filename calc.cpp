@@ -26,14 +26,14 @@ T mul(T a, T b) requires Numeric<T> {
 }
 template<typename T>
 void Log(const char* oprt, T a, T b, T(fptr*)(T,T)) requires Numeric<T>{
-	std::cout<<std::format("{} {} {} = {}\n", a, oprt, b, fpt(a,b);
+	std::cout<<std::format("{} {} {} = {}\n", a, oprt, b, fptr(a,b));
 }
 int main() {
 	int a = 10;
 	int b = 0;
-	Log('+',a,b,add(a,b));
-	Log('-',a,b,sub(a,b));
-	Log('*',a,b,mul(a,b));
+	Log("+",a,b,add<int>);
+	Log("-",a,b,sub<int>);
+	Log("*",a,b,mul<int>);
 	try{
 		int x = devide(a,b);
 		std::cout<<std::format("{} / {} = {}\n", a, b, x); 
